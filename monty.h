@@ -34,7 +34,6 @@ typedef struct instruction_s
 } instruction_t;
 
 /* External Variable */
-extern line_number;
 /*Helper Functions*/
 void free2pointer(char **tokens);
 /*Opcode Functions*/

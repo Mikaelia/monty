@@ -11,6 +11,9 @@ char **tokenize(char *line)
 	char **tokens;
 	char *token;
 
+	tokens == NULL;
+	token == NULL;
+
 	tokens = malloc(sizeof(char *) * bufsize);
 	token = strdup(strtok(line, deliminator));
 	if (!token)

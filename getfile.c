@@ -26,6 +26,11 @@ int getfile(char *file)
 		line_number++;
 		args = tokenize(line);
 		/*Here we will get the correct function from opcode, and return the head of stack */
+		if (!args)
+		{
+			printf("Tokenize error");
+			exit(EXIT_FAILURE);
+		}
 		(getop(args))(&head, line_number);
 	}
     fclose(fptr);
