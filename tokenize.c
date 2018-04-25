@@ -11,10 +11,12 @@ char **tokenize(char *line)
 	char **tokens;
 	char *token;
 
-	tokens == NULL;
-	token == NULL;
-
 	tokens = malloc(sizeof(char *) * bufsize);
+	if (!tokens)
+	{
+		printf("Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	token = strdup(strtok(line, deliminator));
 	if (!token)
 	{

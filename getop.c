@@ -9,6 +9,8 @@ void (*getop(char **args))(stack_t **stack, unsigned int line_number)
 	instruction_t ops[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop}
 	};
 
 	i = 0;
@@ -18,6 +20,6 @@ void (*getop(char **args))(stack_t **stack, unsigned int line_number)
 			return (ops[i].f);
 		i++;
 	}
-	printf("Error\n");
+	printf("L<>: unknown instruction %s\n", args[0]);
 	exit(0);
 }

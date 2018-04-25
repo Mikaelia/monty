@@ -36,6 +36,7 @@ typedef struct instruction_s
 /* External Variable */
 /*Helper Functions*/
 void free2pointer(char **tokens);
+int nodecount(stack_t **stack);
 /*Opcode Functions*/
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);

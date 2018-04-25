@@ -21,7 +21,13 @@ int getfile(char *file)
     }
 
 	line_number = 0;
-	while ((read = getline(&line, &bufsize, fptr)) != -1)
+	read = getline(&line, &bufsize, fptr);
+	if (read == -1)
+	{
+		printf("Error: Can't open file %s", file);
+		exit(EXIT_FAILURE);
+	}
+	while (read != -1)
 	{
 		line_number++;
 		args = tokenize(line);
@@ -32,7 +38,9 @@ int getfile(char *file)
 			exit(EXIT_FAILURE);
 		}
 		(getop(args))(&head, line_number);
+		line = NULL;
 	}
+	printf("%d", head->n);
     fclose(fptr);
 	free(line);
 
