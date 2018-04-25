@@ -11,6 +11,7 @@ int getfile(char *file)
 	ssize_t read;
 	char **args;
 	stack_t *head;
+	unsigned int line_number;
 
 	head = NULL;
     if ((fptr = fopen(file, "r")) == NULL)
@@ -19,14 +20,13 @@ int getfile(char *file)
         exit(1);
     }
 
-	int line_number = 0;
+	line_number = 0;
 	while ((read = getline(&line, &bufsize, fptr)) != -1)
 	{
 		line_number++;
 		args = tokenize(line);
 		/*Here we will get the correct function from opcode, and return the head of stack */
-		head = (getop(args));
-		printf("First arg: %s Second arg: %s\n", args[0], args[1]);
+		(getop(args))(&head, line_number);
 	}
     fclose(fptr);
 	free(line);

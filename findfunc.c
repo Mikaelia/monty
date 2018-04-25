@@ -3,11 +3,12 @@
   * getop - gets function from opcode
   *
   */
-void (*getop(char **args))
+void (*getop(char **args))(stack_t **stack, unsigned int line_number)
 {
 	int i;
 	instruction_t ops[] = {
-		{"push", push}
+		{"push", push},
+		{"pall", pall}
 	};
 
 	i = 0;
