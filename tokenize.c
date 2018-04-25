@@ -6,7 +6,7 @@
   */
 char **tokenize(char *line)
 {
-	const char *deliminator  = " ";
+	const char *deliminator  = "\n ";
 	int bufsize = 3;
 	char **tokens;
 	char *token;
@@ -17,14 +17,13 @@ char **tokenize(char *line)
 		printf("Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	token = strdup(strtok(line, deliminator));
+	token = strtok(line, deliminator);
 	if (!token)
 	{
 		printf("Token Error");
 		return (0);
 	}
 	tokens[0] = token;
-	tokens[1] = strdup(strtok(NULL, deliminator));
-	tokens[3] = '\0';
+	globaln = strtok(NULL, deliminator);
 	return (tokens);
 }

@@ -10,7 +10,10 @@ void (*getop(char **args))(stack_t **stack, unsigned int line_number)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
-		{"pop", pop}
+		{"pop", pop},
+		{"add", add},
+		{"swap", swap},
+		{"nop", nop}
 	};
 
 	i = 0;

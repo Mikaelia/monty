@@ -14,36 +14,29 @@ int getfile(char *file)
 	unsigned int line_number;
 
 	head = NULL;
+	line_number = 0;
+
+	/* open file */
     if ((fptr = fopen(file, "r")) == NULL)
     {
-        printf("Error! opening file");
-        exit(1);
-    }
-
-	line_number = 0;
-	read = getline(&line, &bufsize, fptr);
-	if (read == -1)
-	{
 		printf("Error: Can't open file %s", file);
-		exit(EXIT_FAILURE);
-	}
-	while (read != -1)
+        exit(EXIT_FAILURE);
+    }
+	/* read line from file */
+	while ((read = getline(&line, &bufsize, fptr)) != -1)
 	{
 		line_number++;
 		args = tokenize(line);
-		/*Here we will get the correct function from opcode, and return the head of stack */
 		if (!args)
 		{
 			printf("Tokenize error");
 			exit(EXIT_FAILURE);
 		}
+	/*Find function to opcode, and return the head of stack */
 		(getop(args))(&head, line_number);
-		line = NULL;
 	}
-	printf("%d", head->n);
     fclose(fptr);
-	free(line);
 
-    return 0;
+    return (0);
 }
 

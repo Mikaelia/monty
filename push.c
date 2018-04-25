@@ -13,13 +13,18 @@ void push(stack_t **stack, unsigned int line_number)
 		printf("no head");
 		return;
 	}
+	if (globaln == NULL)
+	{
+		printf("L%d: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	new = malloc(sizeof(stack_t));
 	if (!new)
 	{
 		printf("malloc error");
 		return;
 	}
-	new->n = line_number;
+	new->n = atoi(globaln);
 	if (!*stack)
 		new->next = NULL;
 	else
