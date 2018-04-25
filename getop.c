@@ -8,7 +8,8 @@ void (*getop(char **args))(stack_t **stack, unsigned int line_number)
 	int i;
 	instruction_t ops[] = {
 		{"push", push},
-		{"pall", pall}
+		{"pall", pall},
+		{"pint", pint},
 	};
 
 	i = 0;
@@ -19,5 +20,5 @@ void (*getop(char **args))(stack_t **stack, unsigned int line_number)
 		i++;
 	}
 	printf("Error\n");
-	return (0);
+	exit(0);
 }

@@ -6,7 +6,7 @@
   */
 char **tokenize(char *line)
 {
-	const char *deliminator  = " $";
+	const char *deliminator  = " ";
 	int bufsize = 3;
 	char **tokens;
 	char *token;
