@@ -37,7 +37,8 @@ int getfile(char *file)
 		(getop(args, line_number))(&head, line_number);
 		free(args);
 	}
-	freestack(head);
+	if (head)
+		freestack(head);
 	free(line);
     fclose(fptr);
     return (0);

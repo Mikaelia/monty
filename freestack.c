@@ -12,7 +12,7 @@ void freestack(stack_t *head)
 	if (head == NULL)
 		return;
 
-	while (head != NULL)
+	while (head->next != NULL)
 	{
 		tmp = head;
 		head = head->next;
