@@ -17,6 +17,7 @@ void (*getop(char **args, unsigned int line_number))(stack_t **stack, unsigned i
 		{"add", add},
 		{"swap", swap},
 		{"sub", sub},
+		{"div", _div},
 		{"nop", nop},
 		{NULL, NULL}
 	};
