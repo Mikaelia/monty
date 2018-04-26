@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
   * push - pushes element to top of stack
-  * stack: pointer to head of stack
-  * line_number: line number of operation
+  * @stack: pointer to head of stack
+  * @line_number: line number of operation
   * Return: void
   */
 void push(stack_t **stack, unsigned int line_number)
@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int line_number)
 		printf("no head");
 		return;
 	}
-	if (globaln == NULL || (!atoi(globaln)))
+	if (globaln == NULL)
 	{
 		printf("L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
