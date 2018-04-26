@@ -1,7 +1,8 @@
 #include "monty.h"
 /**
   * getfile - opens file and gets the lines
-  *
+  * @file: file to be opened
+  * Return: 0
   */
 int getfile(char *file)
 {
@@ -17,11 +18,12 @@ int getfile(char *file)
 	line_number = 0;
 
 	/* open file */
-    if ((fptr = fopen(file, "r")) == NULL)
-    {
+	fptr = fopen(file, "r");
+	if (fptr == NULL)
+	{
 		printf("Error: Can't open file %s", file);
-        exit(EXIT_FAILURE);
-    }
+		exit(EXIT_FAILURE);
+	}
 	/* read line from file */
 	while ((read = getline(&line, &bufsize, fptr)) != -1)
 	{
@@ -30,7 +32,7 @@ int getfile(char *file)
 		if (!args)
 		{
 			printf("Tokenize error");
-    		fclose(fptr);
+			fclose(fptr);
 			exit(EXIT_FAILURE);
 		}
 	/*Find function to opcode, and return the head of stack */
@@ -40,7 +42,7 @@ int getfile(char *file)
 	if (head)
 		freestack(head);
 	free(line);
-    fclose(fptr);
-    return (0);
+	fclose(fptr);
+	return (0);
 }
 

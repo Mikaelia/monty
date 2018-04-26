@@ -1,7 +1,10 @@
 #include "monty.h"
 /**
-  * getop - gets function from opcode
+  * getop - function pointer that gets function from opcode
+  * @args: tokenized arguments from input line
+  * @line_number: line number
   *
+  * Return: provides operator function
   */
 void (*getop(char **args, unsigned int line_number))(stack_t **stack, unsigned int line_number)
 {

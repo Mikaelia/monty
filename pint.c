@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
+  * pint - prints the first element of the stack
+  * @stack: head of stack
+  * @line_number: line number
   *
-  *
-  *
-  *
+  * Return: void
   */
 void pint(stack_t **stack, unsigned int line_number)
 {
@@ -13,5 +14,4 @@ void pint(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*stack)->n);
-	return;
 }

@@ -1,9 +1,9 @@
 #include "monty.h"
 /**
-  *
-  *
-  *
-  *
+  * add - adds the first two elements of the stack, returns single node
+  * @stack: head of the stack
+  * @line_number: line number
+  * Return: void
   */
 void add(stack_t **stack, unsigned int line_number)
 {

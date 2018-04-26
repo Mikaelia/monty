@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
+  * pop - removes first element from the stack
+  * @stack: head of the stack
+  * @line_number: line number
   *
-  *
-  *
-  *
+  * Return: void
   */
 void pop(stack_t **stack, unsigned int line_number)
 {

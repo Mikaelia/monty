@@ -1,8 +1,9 @@
 #include "monty.h"
 /**
   * tokenize - breaks up file line into tokens to isolate command
+  * @line: input line from file
   *
-  * Return: Array of tokens
+  * Return: Array of line tokens
   */
 char **tokenize(char *line)
 {
