@@ -3,7 +3,7 @@
   * getop - gets function from opcode
   *
   */
-void (*getop(char **args))(stack_t **stack, unsigned int line_number)
+void (*getop(char **args, unsigned int line_number))(stack_t **stack, unsigned int line_number)
 {
 	int i;
 	instruction_t ops[] = {
@@ -13,7 +13,8 @@ void (*getop(char **args))(stack_t **stack, unsigned int line_number)
 		{"pop", pop},
 		{"add", add},
 		{"swap", swap},
-		{"nop", nop}
+		{"nop", nop},
+		{NULL, NULL}
 	};
 
 	i = 0;
@@ -23,6 +24,7 @@ void (*getop(char **args))(stack_t **stack, unsigned int line_number)
 			return (ops[i].f);
 		i++;
 	}
-	printf("L<>: unknown instruction %s\n", args[0]);
-	exit(0);
+	printf("L%d: unknown instruction %s\n", line_number, args[0]);
+	free(args);
+	exit(EXIT_FAILURE);
 }

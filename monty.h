@@ -37,6 +37,7 @@ typedef struct instruction_s
 extern char *globaln;
 /*Helper Functions*/
 void free2pointer(char **tokens);
+void freestack(stack_t *head);
 int nodecount(stack_t **stack);
 /*Opcode Functions*/
 void pall(stack_t **stack, unsigned int line_number);
@@ -49,5 +50,5 @@ void nop(stack_t **stack, unsigned int line_number);
 /*Main Functions*/
 int getfile(char *file);
 char **tokenize(char *line);
-void (*getop(char **args))(stack_t **stack, unsigned int line_number);
+void (*getop(char **args, unsigned int line_number))(stack_t **stack, unsigned int line_number);
 #endif

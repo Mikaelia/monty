@@ -20,6 +20,6 @@ int main(__attribute__((unused))int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	getfile(argv[1]);
-	return (0);
+	return(0);
 }
 

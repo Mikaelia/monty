@@ -30,13 +30,16 @@ int getfile(char *file)
 		if (!args)
 		{
 			printf("Tokenize error");
+    		fclose(fptr);
 			exit(EXIT_FAILURE);
 		}
 	/*Find function to opcode, and return the head of stack */
-		(getop(args))(&head, line_number);
+		(getop(args, line_number))(&head, line_number);
+		free(args);
 	}
+	freestack(head);
+	free(line);
     fclose(fptr);
-
     return (0);
 }
 
