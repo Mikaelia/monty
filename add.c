@@ -12,7 +12,7 @@ void add(stack_t **stack, unsigned int line_number)
 	len = nodecount(stack);
 	if (len < 2)
 	{
-		printf("L%d: can't add, stack too short", line_number);
+		printf("L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	(*stack)->next->n += (*stack)->n;
