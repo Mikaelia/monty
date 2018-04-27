@@ -21,6 +21,7 @@ void (*getop(char **args, unsigned int line_number))(stack_t **stack, unsigned i
 		{"mod", mod},
 		{"div", _div},
 		{"nop", nop},
+		{"pchar", pchar},
 		{NULL, NULL}
 	};
 
