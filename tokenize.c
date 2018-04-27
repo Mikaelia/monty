@@ -25,6 +25,8 @@ char **tokenize(char *line)
 		free2pointer(tokens);
 		return (0);
 	}
+	if (token[0] == '#')
+		return(0);
 	tokens[0] = token;
 	globaln = strtok(NULL, deliminator);
 	return (tokens);
