@@ -12,7 +12,7 @@ void mul(stack_t **stack, unsigned int line_number)
 	len = nodecount(stack);
 	if (len < 2)
 	{
-		printf("L%d: can't sub, stack too short\n", line_number);
+		printf("L%d: can't mul, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	(*stack)->next->n *= (*stack)->n;
