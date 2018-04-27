@@ -16,8 +16,11 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 	if (globaln == NULL || atoi(globaln) == 0)
 	{
-		printf("L%d: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
+		if (strcmp(globaln, "0") != 0)
+		{
+			printf("L%d: usage: push integer\n", line_number);
+			exit(EXIT_FAILURE);
+		}
 	}
 	new = malloc(sizeof(stack_t));
 	if (!new)
