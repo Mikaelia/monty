@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
-  * sub - subtracts the first element of the stack from second, returns single node
+  * sub - subtracts the first element from second, returns single node
   * @stack: head of the stack
   * @line_number: line number
   * Return: void

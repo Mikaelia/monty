@@ -2,6 +2,8 @@
 char *globaln = 0;
 /**
   * main - interprets monty bytecode
+  * @argc: arg count
+  * @argv: array of args
   *
   * Return: void
   */

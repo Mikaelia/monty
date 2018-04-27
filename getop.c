@@ -2,11 +2,11 @@
 /**
   * getop - function pointer that gets function from opcode
   * @args: tokenized arguments from input line
-  * @line_number: line number
+  * @l: line number
   *
   * Return: provides operator function
   */
-void (*getop(char **args, unsigned int line_number))(stack_t **stack, unsigned int line_number)
+void (*getop(char **args, unsigned int l))(stack_t **stack, unsigned int l)
 {
 	int i;
 	instruction_t ops[] = {
@@ -32,7 +32,7 @@ void (*getop(char **args, unsigned int line_number))(stack_t **stack, unsigned i
 			return (ops[i].f);
 		i++;
 	}
-	printf("L%d: unknown instruction %s\n", line_number, args[0]);
+	printf("L%d: unknown instruction %s\n", l, args[0]);
 	free(args);
 	exit(EXIT_FAILURE);
 }

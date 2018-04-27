@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
-  * mod - finds remainder of division of  first and second elements of the stack
+  * mod - finds remainder of division of first, second elements of the stack
   * @stack: head of the stack
   * @line_number: line number
   * Return: void
