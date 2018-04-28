@@ -94,7 +94,7 @@ All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o mo
 - `monty.c` - main function and loop
 - `getfile.c` - function that opens a file and reads each line
 - `tokenize.c` - function that breaks input line into opcode tokens
-- `getop` - matches opcode with appropriate function call 
+- `getop.c` - matches opcode with appropriate function call 
 - `print_functions.c` - functions that print values from stack
 - `stack_functions.c` - functions that manipulate the stack
 - `calcfunctions.c` - math functions performed on values on the stack
