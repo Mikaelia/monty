@@ -98,7 +98,7 @@ All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o mo
 - `getop` - matches opcode with appropriate function call 
 - `print_functions.c` - functions that print values from stack
 - `stack_functions.c` - functions that manipulate the stack
-- `calc_functions.c` - math functions performed on values on the stack
+- `calcfunctions.c` - math functions performed on values on the stack
 - `util_functions.c` - utility functions
 
 -------------------
