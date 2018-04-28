@@ -21,7 +21,6 @@ char **tokenize(char *line)
 	token = strtok(line, deliminator);
 	if (!token)
 	{
-		printf("Token Error");
 		free2pointer(tokens);
 		return (0);
 	}
