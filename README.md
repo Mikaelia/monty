@@ -90,8 +90,7 @@ All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o mo
 -------------------
 
 ## File Descriptions
-- `monty.h` - function declarations
-- `structs.h` - struct declarations
+- `monty.h` - function and struct declarations
 - `monty.c` - main function and loop
 - `getfile.c` - function that opens a file and reads each line
 - `tokenize.c` - function that breaks input line into opcode tokens
