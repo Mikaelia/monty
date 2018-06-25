@@ -2,8 +2,6 @@
 
 **Monty 0.98** is a scripting language that is compiled into bytecodes. It relies on a stack with instructions to manipulate it. This program is an interpreter for Monty bytecode files.
 
--------------------
-
 ## Usage
 All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o monty`.
 
@@ -47,12 +45,8 @@ All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o mo
 -------------------
 
 ## Project Requirements
-- Formatted with Betty style standards
 - Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
-- Maximum of one global variable
-- No more than 5 functions per file
-- Function prototypes should be included in a header file called `monty.h`
-- Header files should be include guarded
+- Ubunty Trusty 14.04
 
 ### Project Data Structure
     /**
