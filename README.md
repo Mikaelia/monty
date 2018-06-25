@@ -7,6 +7,8 @@ All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o mo
 
 **Usage:** `monty file`
 
+-----------------
+
 ### Example:
 #### Structure of a Monty bytecode file:
     push 1
