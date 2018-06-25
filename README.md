@@ -2,28 +2,11 @@
 
 **Monty 0.98** is a scripting language that is compiled into bytecodes. It relies on a stack with instructions to manipulate it. This program is an interpreter for Monty bytecode files.
 
-## Usage
-All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o monty`.
+## Project Requirements
+- Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
+- Ubunty Trusty 14.04
 
 **Usage:** `monty file`
-
------------------
-
-### Example:
-#### Structure of a Monty bytecode file:
-    push 1
-    push 2
-    push 3
-    pall
-    pint
-
-#### Output
-    3
-    2
-    1
-    3
-
--------------------
 
 ## Monty Bytecode Commands
 - `push <int>` - pushes an integer onto the top of the stack
@@ -44,11 +27,19 @@ All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o mo
 - `div` - divides the second element of the stack by the top element of the stack
 - `mod` - returns the remainder of dividing the second element of the stack by the top element of the stack
 
--------------------
 
-## Project Requirements
-- Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
-- Ubunty Trusty 14.04
+#### Example:
+    push 1
+    push 2
+    push 3
+    pall
+    pint
+
+#### Output:
+    3
+    2
+    1
+    3
 
 ### Project Data Structures
     /**
@@ -66,7 +57,6 @@ All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o mo
             struct stack_s *prev;
             struct stack_s *next;
     } stack_t;
-
 
 
     /**
