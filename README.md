@@ -6,7 +6,9 @@
 - Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
 - Ubunty Trusty 14.04
 
+
 **Usage:** `monty file`
+
 
 ## Monty Bytecode Commands
 - `push <int>` - pushes an integer onto the top of the stack
@@ -73,7 +75,6 @@
             void (*f)(stack_t **stack, unsigned int line_number);
     } instruction_t;
 
--------------------
 
 ## File Descriptions
 - `monty.h` - function and struct declarations
@@ -86,7 +87,6 @@
 - `calcfunctions.c` - math functions performed on values on the stack
 - `util_functions.c` - utility functions
 
--------------------
 
 ## Author
 *Mikaela Gurney* - [Twitter](http://twitter.com/mikaelagurney_)
