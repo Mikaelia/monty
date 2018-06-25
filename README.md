@@ -48,7 +48,7 @@ All files should be compiled with `gcc -Wall -Werror -Wextra -pedantic *.c -o mo
 - Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
 - Ubunty Trusty 14.04
 
-### Project Data Structure
+### Project Data Structures
     /**
      * struct stack_s - doubly linked list representation of a stack (or queue)
      * @n: integer
