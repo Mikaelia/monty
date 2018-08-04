@@ -1,6 +1,6 @@
 # Monty Language Interpreter
 
-> **Monty 0.98** is a scripting language that is compiled into bytecodes. This program is an interpreter for Monty bytecode files. Commands illustrate stack manipulation.
+> **Monty 0.98** is a scripting language that is compiled into bytecodes. This program is an interpreter for Monty bytecode files, and illustrates stack manipulation.
 
 ## Environment
 - Ubunty Trusty 14.04
