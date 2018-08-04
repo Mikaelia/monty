@@ -8,7 +8,7 @@
 ## Installing/ Getting Started
 - Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
 
-### Example Monty File 'test'
+##### Example Monty file 'test'
 
 ```
 push 1
@@ -19,7 +19,7 @@ pint
 pall
 ```
 
-### Usage:
+##### Usage:
 
 ``` 
 $ gcc -Wall -Werror -Wextra -pedantic *.c *.h -o monty
