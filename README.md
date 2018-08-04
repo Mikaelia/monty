@@ -1,16 +1,29 @@
 # Monty Language Interpreter
 
-**Monty 0.98** is a scripting language that is compiled into bytecodes. It relies on a stack with instructions to manipulate it. This program is an interpreter for Monty bytecode files.
+> **Monty 0.98** is a scripting language that is compiled into bytecodes. It relies on a stack with instructions to manipulate it. This program is an interpreter for Monty bytecode files.
 
-## Project Requirements
-- Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
+## Environment
 - Ubunty Trusty 14.04
 
-
-**Usage:** `monty file`
-
-
-## Monty Bytecode Commands
+## Installing/ Getting Started
+- Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
+``` $ gcc -Wall -Werror -Wextra -pedantic *.c *.h -o monty
+=======================================================
+$ ./monty
+$ push 1
+$ push 2
+$ push 3
+$ swap
+$ pint
+2
+$ pall
+2
+1
+3
+$ mod
+0
+```
+## Commands
 - `push <int>` - pushes an integer onto the top of the stack
 - `pop` - removes the top element of the stack
 - `swap` - swaps the top two elements of the stack
@@ -28,20 +41,6 @@
 - `mul` - multiplies the top two elements of the stack
 - `div` - divides the second element of the stack by the top element of the stack
 - `mod` - returns the remainder of dividing the second element of the stack by the top element of the stack
-
-
-#### Example:
-    push 1
-    push 2
-    push 3
-    pall
-    pint
-
-#### Output:
-    3
-    2
-    1
-    3
 
 ### Project Data Structures
     /**
